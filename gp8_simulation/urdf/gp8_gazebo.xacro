@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<robot name="motoman_gp8" xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="$(find gp8_simulation)/urdf/gp8_macro_gazebo.xacro" />
+	<xacro:motoman_gp8 prefix=""/>
+	<link name="world" />
+    <joint name="world_to_gp8" type="fixed">
+        <origin xyz="0 0 0.0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="base"/>
+    </joint>
+
+	    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/motoman_gp8</robotNamespace>
+          <!-- <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> -->
+        </plugin>
+      </gazebo> 
+</robot>

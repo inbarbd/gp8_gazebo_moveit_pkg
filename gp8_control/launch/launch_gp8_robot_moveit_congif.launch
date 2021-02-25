@@ -1,0 +1,19 @@
+<launch>
+  <!-- The planning and execution components of MoveIt! configured to run -->
+  <!-- using the ROS-Industrial interface. -->
+ 
+  <rosparam command="load" file="$(find motoman_gp8_support)/config/joint_names_gp8.yaml"/>
+ 
+  <!-- the "sim" argument controls whether we connect to a Simulated or Real robot -->
+  <!--  - if sim=false, a robot_ip and controller(fs100|dx100) arguments is required -->
+  <arg name="config" default="true" />
+  <arg name="robot_ip" default="192.168.255.1" />
+  <arg name="controller" default="yrc1000" />
+ 
+
+  <!-- run the robot simulator and action interface nodes -->
+    <include file="$(find gp8_moveit_config)/launch/gp8_real_moveit_connection.launch" >
+      <arg name="robot_ip" value="$(arg robot_ip)"/>
+      <arg name="controller" value="$(arg controller)"/>
+    </include>
+</launch>

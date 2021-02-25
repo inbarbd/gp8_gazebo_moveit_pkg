@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: gp8_simulation
+    relative_path: urdf/gp8_gazebo.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/motoman_gp8.srdf
+  CONFIG:
+    author_name: InbarBenDavid
+    author_email: inbarbendavid@gmail.com
+    generated_timestamp: 1596374980
