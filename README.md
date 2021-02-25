@@ -17,5 +17,7 @@ Control real Gp8 joint position:
 To control gp8 joint position without moveit run :
 
 control_Real_pg8_joint_path_command.py 
+
 To move the robot acording to your path run in the terminal:
+
 rosservise call /PubTrajService
