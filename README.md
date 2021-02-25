@@ -10,16 +10,18 @@ roslaunch gp8_simulation gazebo_gp8.launch
 
 
 **Run moveit for simulation:**
+
 roslaunch gp_moveit_config gp8_gazebo_moveit_connection.launch
 
 
 **Moveit for Real Robot:**
+
 roslaunch gp_moveit_config gp8_real_moveit_connection.launch
 
 
 **Control real Gp8 joint position:**
 
-To control gp8 joint position without moveit run :
+Run :
 
 
 control_Real_pg8_joint_path_command.py 
