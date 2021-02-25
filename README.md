@@ -1,5 +1,6 @@
 # gp8_gazebo_moveit_pkg
 This pakege is base on motoman_gp8_support pkg
+
 This pakege contain Gp8 simulation and control, moveit pkg to control simulated and real robot.
 
 
