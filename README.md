@@ -12,7 +12,7 @@ roslaunch gp8_simulation gazebo_gp8.launch
 **Run moveit for simulation:**
 
 roslaunch gp_moveit_config gp8_gazebo_moveit_connection.launch
-<img src=" <a href="https://ibb.co/rQ0wmqk"><img src="https://i.ibb.co/ZfXMVvd/Gp8-Simulation.png" alt="Gp8-Simulation" border="0"></a>" width="500">
+<img src="https://i.ibb.co/ZfXMVvd/Gp8-Simulation.png" alt="Gp8-Simulation" border="0"></a>">
 
 **Moveit for Real Robot:**
 
