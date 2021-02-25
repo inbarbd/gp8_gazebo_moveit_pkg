@@ -4,7 +4,7 @@ This pakege is base on motoman_gp8_support pkg
 This pakege contain Gp8 simulation and control, moveit pkg to control simulated and real robot.
 
 
-**To launch Simulation :
+**To launch Simulation** :
 
 roslaunch gp8_simulation gazebo_gp8.launch
 
