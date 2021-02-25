@@ -18,7 +18,7 @@ roslaunch gp_moveit_config gp8_gazebo_moveit_connection.launch
 
 roslaunch gp_moveit_config gp8_real_moveit_connection.launch
 
- <img src= <a href="https://ibb.co/0CcGD1Y"><img src="https://i.ibb.co/487VmC4/Gp8-Moveit.png" alt="Gp8-Moveit" border="0"></a>
+<a href="https://ibb.co/0CcGD1Y"><img src="https://i.ibb.co/487VmC4/Gp8-Moveit.png" alt="Gp8-Moveit" border="0"></a>
 
 **Control real Gp8 joint position:**
 
