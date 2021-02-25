@@ -26,6 +26,6 @@ Run :
 
 control_Real_pg8_joint_path_command.py 
 
-To move the robot acording to your path run in the terminal:
+To move the robot according to your path run in the terminal:
 
 rosservise call /PubTrajService
