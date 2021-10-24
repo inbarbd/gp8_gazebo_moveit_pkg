@@ -15,22 +15,22 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from std_srvs.srv import Empty, EmptyResponse
 from motoman_msgs.msg import DynamicJointTrajectory, DynamicJointPoint, DynamicJointsGroup
 
-PATH = [[0.00015339808305725455, -0.08064904808998108, -1.021170973777771, 0.07330382615327835, 0.11543206125497818, 0.41520997881889343], \
-    [0.20015339808305727, 0.11935095191001893, -0.821170973777771, 0.27330382615327836, 0.3154320612549782, 0.6152099788188934]]
+PATH = [[-0.02328241989016533, -0.06334861367940903, 0.008743690326809883, 3.104797601699829, 1.6909263134002686, 4.823516845703125], \
+    [-0.02328241989016533, -0.06334861367940903, 0.008743690326809883, 3.104797601699829, 1.4, 4.823516845703125]]
 
-# JOINT_STATE_TOPIC = "/joint_states"
+JOINT_STATE_TOPIC = "/motoman_gp8/joint_states"
 
 class GP8_JointPathCommandPublisher(object):
     def __init__(self):
         rospy.loginfo("Enter GP8_JointPathCommandPublisher")
-        self.controller_commend = "/joint_path_command"
+        # self.controller_commend = "/joint_path_command"
         self.duration = 1.5
-        joint_states_sub = rospy.Subscriber("/joint_states", JointState, self.JointStatesCallback)
+        joint_states_sub = rospy.Subscriber(JOINT_STATE_TOPIC, JointState, self.JointStatesCallback)
         # Check if ROs is loaunch!        
         joints_data = None
         while joints_data is None:
             try:
-                joints_data = rospy.wait_for_message("/joint_states", JointState, timeout=5)
+                joints_data = rospy.wait_for_message(JOINT_STATE_TOPIC, JointState, timeout=5)
                 # print(joints_data)
             except:
                 rospy.logwarn("Time out ")
@@ -72,10 +72,12 @@ class GP8_JointPathCommandPublisher(object):
     def JointTrajectoryPoint(self,PosList, time):
         NextPoint = JointTrajectoryPoint()
         if time == 0:
+            print('1')
             NextPoint.positions = self.current_angles
             NextPoint.velocities = [0]*len(self.current_angles)
             NextPoint.time_from_start = rospy.Duration(0.0)
         else:
+            print('2')
             NextPoint.positions = PosList
             NextPoint.velocities = self.CalculateJointVelocety(time)
             NextPoint.time_from_start = rospy.Duration(time)
@@ -84,11 +86,11 @@ class GP8_JointPathCommandPublisher(object):
 
     def JointTrajectoryMsg(self,path):
         JointTraj = JointTrajectory()
-        print(self.names)
+        # print(self.names)
         JointTraj.joint_names = self.names
 
         haeder = Header()
-        haeder.frame_id = 'base_link'
+        haeder.frame_id = ''
         haeder.seq = 0
         JointTraj.header = haeder
 
@@ -131,7 +133,8 @@ class GP8_JointPathCommandPublisher(object):
 
 class PubTrajService(object):
     def __init__(self,traj):
-        self.pub = rospy.Publisher('/joint_path_command', JointTrajectory, queue_size=1)
+        # self.pub = rospy.Publisher('/joint_path_command', JointTrajectory, queue_size=1)
+        self.pub = rospy.Publisher('/motoman_gp8/gp8_controller/command', JointTrajectory, queue_size=1)
         self.traj = traj
         # print(traj)
 
@@ -149,6 +152,7 @@ class PubTrajService(object):
         rospy.loginfo("TRAJECTORY IS PUBLISH")
         return EmptyResponse()
 
+
 def main_traj(traj):
     # rospy.init_node("PubTrajService_Service")
     a = PubTrajService(traj)
@@ -158,6 +162,7 @@ def main_traj(traj):
 if __name__ == '__main__':
     rospy.init_node('move_group_interface', anonymous=True)
     manipulator = GP8_JointPathCommandPublisher()
+    print("GOODMORNING")
     manipulator.move_to_joint(PATH)
     traj = manipulator.traj
     print(traj)

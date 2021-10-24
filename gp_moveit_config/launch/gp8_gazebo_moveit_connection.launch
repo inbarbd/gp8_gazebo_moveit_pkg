@@ -1,5 +1,5 @@
 <launch>
-
+ 
   <rosparam command="load" file="$(find gp_moveit_config)/config/joint_names_gp8.yaml"/>
 
   <include file="$(find gp_moveit_config)/launch/planning_context.launch" >
@@ -12,6 +12,7 @@
   </node>
 
   <include file="$(find gp_moveit_config)/launch/move_group.launch">
+     <arg name="gazebo_sim" value="True" />
     <arg name="publish_monitored_planning_scene" value="true" />
   </include>
 

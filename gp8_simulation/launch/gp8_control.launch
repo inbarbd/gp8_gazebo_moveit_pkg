@@ -14,5 +14,7 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" ns = "/motoman_gp8"
 		respawn="false" output="screen">
   </node>
+  
+  <remap from="/motoman_gp8/gp8_controller/command" to="/joint_path_command"/>
 
 </launch>

@@ -1,5 +1,5 @@
 <launch>
-
+  
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
   <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -48,9 +48,12 @@
     <arg name="pipeline" value="$(arg pipeline)" />
   </include>
 
+  <arg name="gazebo_sim" default=""/>
+
   <!-- Trajectory Execution Functionality -->
-  <include ns="move_group" file="$(find gp_moveit_config)/launch/trajectory_execution.launch.xml" if="$(arg allow_trajectory_execution)">
+  <include ns="move_group" file="$(find gp_moveit_config)/launch/trajectory_execution.launch.xml"  if="$(arg allow_trajectory_execution)">
     <arg name="moveit_manage_controllers" value="true" />
+    <arg name="gazebo_sim1" value="$(arg gazebo_sim)" />
     <arg name="moveit_controller_manager" value="motoman_gp8" unless="$(arg fake_execution)"/>
     <arg name="moveit_controller_manager" value="fake" if="$(arg fake_execution)"/>
   </include>
