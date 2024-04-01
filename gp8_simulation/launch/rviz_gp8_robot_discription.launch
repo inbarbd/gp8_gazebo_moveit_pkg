@@ -1,0 +1,16 @@
+
+<launch>
+
+
+  <!-- Load the URDF into tshe ROS Parameter Server -->
+  <param name="robot_description"	 command="$(find xacro)/xacro.py $(find gp8_simulation)/urdf/gp8_gazebo.xacro" />
+  <!-- combine joint values-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+      <!-- show rviz-->
+  <!-- send joint values-->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="use_gui" value="True"/>
+  </node>
+
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find gp8_simulation)/config/rviz.rviz"/>  
+</launch>

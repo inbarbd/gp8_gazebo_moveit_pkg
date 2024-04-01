@@ -3,7 +3,12 @@
     <xacro:macro name="motoman_gp8" params="prefix">
     <xacro:include filename="$(find gp8_simulation)/urdf/gazebo_gp8_plugin.xacro" />
     	<xacro:transmitions prefix=""/>
-
+    <xacro:macro name="material_yaskawa_blue">
+    <material name="">
+      <color rgba="${color_yaskawa_blue}"/>
+    </material>
+  </xacro:macro>
+    <xacro:property name="color_yaskawa_blue" value="${33/255} ${38/255} ${191/255} 1.0"/>
     
     <!-- Properties -->
     <!-- <material name="yaskawa_blue">
@@ -21,7 +26,7 @@
             <geometry> 
                 <mesh filename="package://motoman_gp8_support/meshes/visual/gp8_base_link.stl"/>
             </geometry>
-            <material name="yaskawa_blue"/>
+            <xacro:material_yaskawa_blue/>
         </visual>
         <collision>
             <geometry>
@@ -38,7 +43,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp8_support/meshes/visual/gp8_link_1_s.stl"/>
             </geometry>
-            <material name="yaskawa_blue"/>
+            <xacro:material_yaskawa_blue/>
         </visual>
         <collision>
             <geometry>
@@ -56,7 +61,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp8_support/meshes/visual/gp8_link_2_l.stl"/>
             </geometry>
-            <material name="yaskawa_blue"/>
+            <xacro:material_yaskawa_blue/>
         </visual>
         <collision>
             <geometry>
@@ -74,7 +79,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp8_support/meshes/visual/gp8_link_3_u.stl"/>
             </geometry>
-            <material name="yaskawa_blue"/>
+            <xacro:material_yaskawa_blue/>
         </visual>
         <collision>
             <geometry>
@@ -91,7 +96,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp8_support/meshes/visual/gp8_link_4_r.stl"/>
             </geometry>
-            <material name="yaskawa_blue"/>
+            <xacro:material_yaskawa_blue/>
         </visual>
         <collision>
             <geometry>
@@ -109,7 +114,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp8_support/meshes/visual/gp8_link_5_b.stl"/>
             </geometry>
-            <material name="yaskawa_blue"/>
+            <xacro:material_yaskawa_blue/>
         </visual>
         <collision>
             <geometry>
@@ -127,7 +132,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp8_support/meshes/visual/gp8_link_6_t.stl"/>
             </geometry>
-            <material name="yaskawa_blue"/>
+            <xacro:material_yaskawa_blue/>
         </visual>
         <collision>
             <geometry>
