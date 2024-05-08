@@ -57,7 +57,7 @@ Exampels for joint_position control and velocity control is at control_gp8_high_
 right- position_control exmple </br>
 left- velocity control example </br>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
