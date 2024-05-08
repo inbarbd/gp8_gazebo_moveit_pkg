@@ -58,14 +58,14 @@ left- velocity control example </br>
   <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
-      <img align=center width=250 src="/video/gazebo_moveit_demo.png" />
+      <img align=center width=250 src="/video/position_control/position_control_gif.gif" />
       <br/>
     </td>
   </tr>
   <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
-      <img align=center width=250 src="/video/gazebo_moveit_demo.png" />
+      <img align=center width=250 src="/video/velocity_control/velocity_control_gif.gif" />
       <br/>
     </td>
   </tr>
