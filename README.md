@@ -5,7 +5,8 @@ In this pkg there is the STL files for the robot_description and the motoman_dri
 This pakege contain Gp8 simulation and control, moveit pkg to control simulated and real robot.
 
 
-**Launch Simulation:** 
+**Launch Simulation:** </br>
+To launch the robot description with joint command gui run : </br>
 roslaunch gp8_simulation rviz_gp8_robot_discription.launch </br>
 
 <table align="center">
@@ -18,8 +19,9 @@ roslaunch gp8_simulation rviz_gp8_robot_discription.launch </br>
   </tr>
 </table>
 
+To launch gp8 in gazebo simulation run : </br>
 roslaunch gp8_simulation gazebo_gp8.launch </br>
-<table>
+<table align="center">
   <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
@@ -29,10 +31,11 @@ roslaunch gp8_simulation gazebo_gp8.launch </br>
   </tr>
 </table>
 
-**Run moveit for simulation:**
- roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:True
+**Run moveit for simulation:** </br>
+To launch gazebo simulation with moveit control run: </br>
+roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:True </br>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
