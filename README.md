@@ -47,7 +47,7 @@ roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:True </br>
 
 
 
-**Moveit for Real Robot:**
+**Moveit for Real Robot:**</br>
 To launch real robot connection with low high rate control and moveit pkg, run: </br>
 roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:False </bt>
 
@@ -72,5 +72,6 @@ left- velocity control example </br>
   </tr>
 </table>
 
+---
 
-
+I hope you will find this package useful.
