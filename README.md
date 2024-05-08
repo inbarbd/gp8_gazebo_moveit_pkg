@@ -2,7 +2,7 @@
 This pakege is base on [motoman_ps](https://github.com/MaxorPaxor/motoman_ps])</br> 
 In this pkg there is the STL files for the robot_description and the motoman_driver to communicate with the real robot in high and low frequency.</br>
 
-This pakege contain Gp8 simulation and control, moveit pkg to control simulated and real robot.
+This pakege contain Gp8 simulation and control, moveit pkg for simulated and real robot control.
 
 
 **Launch Simulation:** </br>
@@ -39,7 +39,7 @@ roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:True </br>
   <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
-      <img align=center width=250 src="/video/gazebo_moveit_demo.png" />
+      <img align=center width=250 src="/video/gazebo_moveit_demo.gif" />
       <br/>
     </td>
   </tr>
@@ -48,10 +48,10 @@ roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:True </br>
 
 
 **Moveit for Real Robot:**
-
+To launch real robot connection with low high rate control and moveit pkg, run: </br>
 roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:False </bt>
 
-exampels for joint_position control and velocity control is at control_gp8_high_rate_control.py
+Exampels for joint_position control and velocity control is at control_gp8_high_rate_control.py </bt>
 
 
 right- position_control exmple </br>
@@ -64,8 +64,6 @@ left- velocity control example </br>
       <img align=center width=250 src="/video/position_control/position_control_gif.gif" />
       <br/>
     </td>
-  </tr>
-  <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
       <img align=center width=250 src="/video/velocity_control/velocity_control_gif.gif" />
