@@ -8,7 +8,7 @@ This pakege contain Gp8 simulation and control, moveit pkg to control simulated 
 **Launch Simulation:** 
 roslaunch gp8_simulation rviz_gp8_robot_discription.launch </br>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
     <!-- <caption>Gazebo Simulation</caption> -->
