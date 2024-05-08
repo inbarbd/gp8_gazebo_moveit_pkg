@@ -48,5 +48,28 @@ roslaunch gp8_simulation gazebo_gp8.launch </br>
 
 roslaunch gp8_control gp8_robot_and_sim_moveit.launch gazebo_sim=:False </bt>
 
-
 exampels for joint_position control and velocity control is at control_gp8_high_rate_control.py
+
+
+right- position_control exmple </br>
+left- velocity control example </br>
+
+<table>
+  <tr>
+    <td align="center">
+    <!-- <caption>Gazebo Simulation</caption> -->
+      <img align=center width=250 src="/video/gazebo_moveit_demo.png" />
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+    <!-- <caption>Gazebo Simulation</caption> -->
+      <img align=center width=250 src="/video/gazebo_moveit_demo.png" />
+      <br/>
+    </td>
+  </tr>
+</table>
+
+
+

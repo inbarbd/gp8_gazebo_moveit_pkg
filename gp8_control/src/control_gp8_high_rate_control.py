@@ -20,12 +20,12 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 """
 
 
-JOINT_CONTROLLER = '/joint_command' #high rate control
-# JOINT_CONTROLLER = '/joint_path_command' #low rate control
-JOINT_STATE_TOPIC = '/joint_states' #REAL
+JOINT_CONTROLLER = '/joint_command' #high rate control REAL_ROBOT
+# JOINT_CONTROLLER = '/joint_path_command' #low rate control REAL_ROBOT
+JOINT_STATE_TOPIC = '/joint_states' #REAL_ROBOT
 
 # JOINT_CONTROLLER = '/motoman_gp8/gp8_controller/command' #Gazebo control
-# JOINT_STATE_TOPIC = '/motoman_gp8/joint_states'#Gazebo
+# JOINT_STATE_TOPIC = '/motoman_gp8/joint_states' #Gazebo control
 class gp8_real_time_position_control:
     def __init__(self, rate=1):
         self.rate = rate
